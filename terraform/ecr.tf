@@ -9,7 +9,7 @@ resource "aws_ecr_repository" "vprofileapp" {
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
-    scan_on_push = true   # AWS scans for vulnerabilities on every push
+    scan_on_push = true # AWS scans for vulnerabilities on every push
   }
 }
 

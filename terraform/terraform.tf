@@ -11,7 +11,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.95, < 6.0"   # Class 2 correction — EKS module v20 needs >=5.95
+      version = ">= 5.95, < 6.0" # Class 2 correction — EKS module v20 needs >=5.95
     }
     random = {
       source  = "hashicorp/random"
@@ -22,9 +22,9 @@ terraform {
   # State lives in S3, not on the workflow runner.
   # The runner is destroyed every job — local state would vanish.
   backend "s3" {
-    bucket = "REPLACE_WITH_YOUR_BUCKET_NAME"   # <-- put your bucket name here
+    bucket = "REPLACE_WITH_YOUR_BUCKET_NAME" # <-- put your bucket name here
     key    = "terraform.tfstate"
-    region = "us-east-2"                        # <-- put your region here
+    region = "us-east-2" # <-- put your region here
   }
 
   required_version = ">= 1.6.0"

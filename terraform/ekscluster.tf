@@ -9,10 +9,10 @@
 
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
-  version = "~> 20.31"   # Class 2 correction
+  version = "~> 20.31" # Class 2 correction
 
   cluster_name    = local.cluster_name
-  cluster_version = "1.33"   # Class 2 correction (was 1.27)
+  cluster_version = "1.33" # Class 2 correction (was 1.27)
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
